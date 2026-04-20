@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookin' — Recipes for Every Occasion</title>
+  <meta name="description" content="Discover delicious recipes for breakfast, lunch, dinner, and everything in between. Cook with confidence." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">👨‍🍳</span>
+        Cookin'
+      </a>
+      <nav>
+        <a href="#recipes" class="active">Recipes</a>
+        <a href="#categories">Categories</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>What are we cooking today? 🍳</h1>
+      <p>Browse hundreds of delicious recipes for every skill level and occasion.</p>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search recipes, ingredients..."
+          aria-label="Search recipes"
+        />
+        <button id="search-btn" type="button">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <div class="section-header">
+      <h2 class="section-title">Browse by Category</h2>
+    </div>
+    <div class="category-grid" id="category-grid"></div>
+  </section>
+
+  <!-- Recipes -->
+  <section class="recipes-section" id="recipes">
+    <div class="section-header">
+      <h2 class="section-title">Featured Recipes</h2>
+    </div>
+    <div class="recipe-grid" id="recipe-grid"></div>
+  </section>
+
+  <!-- Recipe Modal -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-emoji" id="modal-emoji"></span>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close recipe">✕</button>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-title"></h2>
+        <div class="modal-meta">
+          <span>⏱️ <strong id="modal-time"></strong></span>
+          <span>👥 <strong id="modal-servings"></strong></span>
+          <span>📊 <strong id="modal-difficulty"></strong></span>
+        </div>
+        <p class="modal-section-title">Ingredients</p>
+        <ul class="ingredients-list" id="modal-ingredients"></ul>
+        <p class="modal-section-title">Instructions</p>
+        <ol class="steps-list" id="modal-steps"></ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by <strong>Cookin'</strong> — Recipes for every table.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
