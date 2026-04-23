@@ -12,7 +12,7 @@
             'assets/images/iphone-mid-explode.png',
             'assets/images/iphone-exploded.png',
         ],
-        bgColor: '#000000',
+        bgColor: '#A6E1F1',
         scrollSmoothing: 0.08,
         revealThreshold: 0.15,
     };
